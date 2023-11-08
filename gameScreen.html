@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Xtreme Rock Paper Scissors</title>
+        <link rel = "styleSheet" href = "style.css">
+		<style>
+            body {
+                background-color: #DBE2E9;
+            }
+        </style>
+        <script src = "utilities.js"></script>
+		<script>
+            let pNumRocks, pNumPapers, pNumScissors, cNumRocks, cNumPapers, cNumScissors;
+            function initialize() {
+                pNumRocks = 5;
+                pNumPapers = 5;
+                pNumScissors = 5;
+                cNumRocks = 5;
+                cNumPapers = 5;
+                cNumScissors = 5;
+
+                computerNumRocksOutput = document.getElementById("computerNumRocks");
+                computerNumPapersOutput = document.getElementById("computerNumPapers");
+                computerNumScissorsOutput = document.getElementById("computerNumScissors");
+                playerNumRocksOutput = document.getElementById("playerNumRocks");
+                playerNumPapersOutput = document.getElementById("playerNumPapers");
+                playerNumScissorsOutput = document.getElementById("playerNumScissors");
+                logOutputBox = document.getElementById("logOutput");
+                log = "Game Log: ";
+                display();
+            }
+
+            function addMsg(msg) {
+                log += "<br />" + msg;
+                display();
+            }
+
+            function display() {
+                computerNumRocksOutput.innerHTML = cNumRocks;
+                computerNumPapersOutput.innerHTML = cNumPapers;
+                computerNumScissorsOutput.innerHTML = cNumScissors;
+                playerNumRocksOutput.innerHTML = pNumRocks;
+                playerNumPapersOutput.innerHTML = pNumPapers;
+                playerNumScissorsOutput.innerHTML = pNumScissors;
+                logOutputBox.innerHTML = log;
+            }
+        </script>
+	</head>
+	<body onload = "initialize();">
+        <div class = "parent">
+            <div class = "child" id = "computerNumRocks"></div>
+            <div class = "child" id = "computerNumPapers"></div>
+            <div class = "child" id = "computerNumScissors"></div>
+        </div>
+        <div class = "center">
+        <img id = "cRock" src = "images/rock.png">
+        <img id = "cPaper" src = "images/paper.png">
+        <img id = "cScissor" src = "images/scissors.png">
+        </div>
+        <hr />
+        <div class = "parent">
+            <div class = "child" id = "playerNumRocks"></div>
+            <div class = "child" id = "playerNumPapers"></div>
+            <div class = "child" id = "playerNumScissors"></div>
+        </div>
+        <div class = "center">
+        <img onmousedown = "cardPlayed(this.id)" id = "pRock" src = "images/rock.png">
+        <img onmousedown = "cardPlayed(this.id)" id = "pPaper" src = "images/paper.png">
+        <img onmousedown = "cardPlayed(this.id)" id = "pScissor" src = "images/scissors.png">
+        </div>
+        <hr />
+        <div id = "logOutput">Log --</div>
+		<div id = "gameScreenButtons" >
+			<a href = "home.html"><button id = "homeButton">Return to start screen</button></a>
+			<a href = "gameScreen.html"><button id = "resetButton">Restart</button></a>
+		</div>
+    </body>
+</html>

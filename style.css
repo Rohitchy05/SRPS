@@ -1,0 +1,96 @@
+p {
+    font-size: 14pt;
+    text-align: center;
+}
+
+div {
+    font-size: 16pt;
+    text-align: center;
+}
+
+#logOutput {
+    border: thick double black;
+	overflow: scroll;
+	width: auto;
+	height: 500px;
+}
+
+.start {
+    height: 60px;
+    width: 90px;
+    margin: 5px;
+}
+
+#gameScreenButtons {
+	display: flex;
+	justify-content: center;
+    padding-inline: 10px;
+}
+
+#homeButton {
+    margin-left: 10px;
+}
+
+#resetButton {
+	margin-right: 10px;
+}
+
+.rule {
+    height: 50px;
+    width: 130px;
+}
+
+img {
+    margin: 4px 4px 4px 4px;
+}
+
+#pRock {
+    transform: rotate(-20deg);
+}
+
+#pRock:hover {
+    transition: transform .2s;
+    transform: scale(1.5);
+}
+
+#pPaper:hover {
+    transition: transform .2s;
+    transform: scale(1.5);
+}
+
+#pScissor {
+    transform: rotate(20deg);
+}
+
+#pScissor:hover {
+    transition: transform .2s;
+    transform: scale(1.5);
+}
+
+#cRock {
+    transform: rotate(200deg);
+}
+
+
+#cPaper {
+    transform: rotate(-180deg);
+}
+
+#cScissor {
+    transform: rotate(-200deg);
+}
+
+.parent {
+    text-align: center;
+}
+
+.child {
+    display: inline-block;
+    font-size: 48px;
+    vertical-align: middle;
+    padding: 100px;
+}
+
+.center {
+    padding: 50px;
+}
